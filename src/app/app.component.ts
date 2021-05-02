@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'i18n-playground';
+  nextArrivalDate: Date = new Date();
+  price: number = 1.5;
+  percentage: number = 0.7;
+  pineappleNumber: number = 2;
 }
