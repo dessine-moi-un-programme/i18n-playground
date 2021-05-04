@@ -1,27 +1,17 @@
 # I18nPlayground
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
+Ce projet est une application de démo pour la mise en place de l'internationalisation. La branche principale (master) contient le code de l'application en anglais seulement, tandis que la branche i18n contient le code de l'application internationalisée.
 
-## Development server
+Vous pouvez retrouver l'article complet sur https://dessine-moi-un-programme.blogspot.com/2021/05/bonjour-hello-buenas-tardes.html
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Serveur de dev
 
-## Code scaffolding
+Pour lancer l'application en mode développement, lancer la commande "ng serve". Attention cela ne marchera pas sur la branche i18n.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Serveur web pour le build
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Pour lancer un build de l'application, lancer la commande "ng build".
+Pour tester l'application, vous allez avoir besoin d'un serveur web. Installez le avec la commande "npm i lite-server --save-dev".
+Lancer le avec la commande "lite-server --baseDir="dist/i18n-playground".
+Naviguer sur "http://localhost:3000/index.html" pour une version buildée de la master.
+Naviguer sur "http://localhost:3000/fr/index.html" ou "http://localhost:3000/en-US/index.html" pour une version buildée de la branche i18n.
