@@ -1,25 +1,35 @@
 <header class="bg-info w-100">
   <div class="container">
-    <h1 class="row text-white align-items-center justify-content-center py-2">i18n-playground</h1>
+    <div class="row text-white align-items-center justify-content-center py-2">
+      <h1 >i18n-playground</h1>
+      <select class="form-select bg-info text-white border-0 ml-4" [(ngModel)]="language" (change)="languageChanged()">
+        <option value="fr">FR</option>
+        <option value="en-US">EN</option>
+      </select>
+    </div>
+    
   </div>
 </header>
 
 <div class="container shadow-lg mt-5 bg-body rounded col-10 col-md-8  col-lg-6 p-4">
-  <h1 class="row justify-content-center mb-4">Online pineapple store</h1>
+  <h1 i18n="title othe page | The description of the e-shop" class="row justify-content-center mb-4">Online pineapple store</h1>
 
-  <img src="assets/pineapple.jpg" title="pineapple" class="w-100 mx-auto mb-4">
+  <img src="assets/pineapple.jpg" i18n-title="img | pineapple img title" title="pineapple" class="w-100 mx-auto mb-4">
 
-  <p class="lead"><b>Description :</b> a delicious pineapple</p>
+  <p class="lead" i18n><b>Description :</b> a delicious pineapple</p>
 
-  <p class="lead"><b>Next arrival date :</b> {{ nextArrivalDate | date}}</p>
+  <p class="lead" i18n><b>Next arrival date :</b> {{ nextArrivalDate | date}}</p>
   
-  <p class="lead"><b>Price (per unit) :</b> {{ price | currency:'EUR' }}</p>
+  <p class="lead" i18n><b>Price (per unit) :</b> {{ price | currency:'EUR' }}</p>
 
-  <p class="lead"><b>Percentage chance that the pineapple is ripe :</b> {{ percentage | percent}} </p>
+  <p class="lead" i18n><b>Percentage chance that the pineapple is ripe :</b> {{ percentage | percent}} </p>
 
-  <p class="lead"><b>Number of pineapples remaining :</b> {{ pineappleNumber == 0 ? 'no pineapple left' : pineappleNumber + ' pineapple(s) left'}} </p>
+  <p class="lead" i18n>
+    <b>Number of pineapples remaining :</b> 
+    {pineappleNumber, plural, =0 {no pineapple left} other {{{pineappleNumber}} pineapple(s) left}}
+  </p>
 
   <div class="row justify-content-center mt-4">
-    <button type="button" class="btn btn-primary col-4">BUY</button>
+    <button type="button" class="btn btn-primary col-4" i18n>BUY</button>
   </div>
 </div>
